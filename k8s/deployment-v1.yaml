@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: mobile-bank
-        image: YOUR_DOCKER_USERNAME/mobile-bank-v1:latest
+        image: rania590/mobile-bank-v1:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
