@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mobile-bank-v2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mobile-bank
+      version: v2
+  template:
+    metadata:
+      labels:
+        app: mobile-bank
+        version: v2
+    spec:
+      containers:
+      - name: mobile-bank
+        image: mobile-bank:v2
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
